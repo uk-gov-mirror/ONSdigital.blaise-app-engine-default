@@ -1,7 +1,7 @@
 # blaise-app-engine-default
 Blank Express App to set as the default App Engine service in a Google Cloud Project.
 
-*NOTE: * Once created the default service cannnot be deleted in your poject
+**NOTE:** Once created the default service cannnot be deleted in your poject
 
 ## Setup
 
