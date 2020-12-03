@@ -16,7 +16,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${GITHUB_TOKEN}
-        release_name: Release ${GITHUB_TOKEN}
+        tag_name: release
+        release_name: The Release
         draft: false
         prerelease: false
