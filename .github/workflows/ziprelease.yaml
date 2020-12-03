@@ -10,14 +10,19 @@ jobs:
       with:
         filename: 'release.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig'
+    - name: Declare some variables
+      id: vars
+      shell: bash
+      run: |
+        echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
     - name: Create GitHub Release
       id: create_release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ github.ref }}
-        release_name: The Release ${{ github.ref }}
+        tag_name: ${{ steps.vars.outputs.sha_short }}
+        release_name: The Release ${{ steps.vars.outputs.sha_short }}
         draft: false
         prerelease: false
     - name: Upload Release Asset
