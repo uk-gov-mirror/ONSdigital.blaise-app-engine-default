@@ -1,5 +1,6 @@
 # blaise-app-engine-default
 Blank Express App to set as the default App Engine service in a Google Cloud Project.
+This is a simple Node.js Express server then returns a 200 message.
 
 **NOTE:** Once created the default service cannnot be deleted in your poject
 
@@ -25,3 +26,15 @@ gcloud builds submit
 ```
 The cloudbuild output will be visiable in the terminal
 
+## Running locally
+
+In mean if you want to run the node.js application locally then you can run:
+
+```.shell
+yarn install
+```
+
+Then:
+```.shell
+yarn start
+```
