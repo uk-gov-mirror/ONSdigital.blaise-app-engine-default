@@ -17,6 +17,8 @@ gcloud app deploy
 ### To deploy using cloudbuild
 To use this option you will need to give cloudbuild access to appengine which can be done in the cloudbuild setting in the Google Console.
 
+This will use the `cloudbuild.yaml` in the project.
+
 In the project root, run:
 ```.shell
 gcloud builds submit
