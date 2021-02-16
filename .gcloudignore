@@ -16,3 +16,4 @@
 # Node.js dependencies:
 .idea/
 node_modules/
+.env
