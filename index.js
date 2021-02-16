@@ -16,7 +16,7 @@ app.get("/404", async function (req, res) {
 
 app.get("/500", async function (req, res) {
     console.log("Server called");
-    res.render("../views/500.html", {});
+    res.render("../views/500.html", {TOBI_URL});
 });
 
 app.get("*", async function (req, res) {
