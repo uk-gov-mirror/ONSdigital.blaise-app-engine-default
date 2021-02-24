@@ -8,4 +8,6 @@ steps:
   args:
     - '-c'
     - |
-      gcloud app domain-mappings create _ENV_DOMAIN
+      gcloud app domain-mappings create $$ENV_DOMAIN
+  env:
+    - 'ENV_DOMAIN=$_ENV_DOMAIN'
