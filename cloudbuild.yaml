@@ -2,12 +2,3 @@ steps:
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
   timeout: "1600s"
-
-- name: 'gcr.io/cloud-builders/gcloud'
-  entrypoint: /bin/sh
-  args:
-    - '-c'
-    - |
-      gcloud app domain-mappings create $$ENV_DOMAIN
-  env:
-    - 'ENV_DOMAIN=$_ENV_DOMAIN'
