@@ -8,6 +8,8 @@ let {GOOGLE_CLOUD_PROJECT} = process.env;
 
 const TOBI_URL = `https://tobi-ui-dot-${GOOGLE_CLOUD_PROJECT}.nw.r.appspot.com`
 const DQS_URL = `https://dqs-ui-dot-${GOOGLE_CLOUD_PROJECT}.nw.r.appspot.com`
+const BUM_URL = `https://bum-ui-dot-${GOOGLE_CLOUD_PROJECT}.nw.r.appspot.com`
+const DDM_URL = `https://ddm-ui-dot-${GOOGLE_CLOUD_PROJECT}.nw.r.appspot.com`
 
 app.get("/404", async function (req, res) {
     console.log("Server called");
@@ -21,7 +23,7 @@ app.get("/500", async function (req, res) {
 
 app.get("*", async function (req, res) {
     console.log("Server called");
-    res.render("../views/index.html", {TOBI_URL, DQS_URL});
+    res.render("../views/index.html", {TOBI_URL, DQS_URL, BUM_URL, DDM_URL});
 });
 
 
